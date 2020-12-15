@@ -18,16 +18,16 @@
 <body>
   <div class="container col-12" >
     <div class="primera linea row m-4 text-center">
-      <div class="img mr-3"> <img id="galaxia" src="imagenes/galaxia.jpg"> </div>
-      <div class="img mr-3"> <img id="luna" src="imagenes/luna.jpg"> </div>
-      <div class="img mr-3"> <img id="sol" src="imagenes/sol.jpg"> </div>
-      <div class="img mr-3"> <img id="estrellas" src="imagenes/esrellas.jpg"> </div>
+      <img class="img mr-3" src="imagenes/galaxia.jpg"> 
+      <img class="img mr-3" src="imagenes/luna.jpg"> 
+      <img class="img mr-3" src="imagenes/sol.jpg"> 
+      <img class="img mr-3" src="imagenes/esrellas.jpg"> 
     </div>
     <div class="primera linea row m-4 text-center">
-      <div class="img mr-3"> <img id="estrellas2" src="imagenes/esrellas.jpg"> </div>
-      <div class="img mr-3"> <img id="sol2" src="imagenes/sol.jpg"> </div>
-      <div class="img mr-3"> <img id="luna2" src="imagenes/luna.jpg"> </div>
-      <div class="img mr-3"> <img id="galaxia2" src="imagenes/galaxia.jpg"> </div>
+      <img class="img mr-3" src="imagenes/esrellas.jpg"> 
+      <img class="img mr-3" src="imagenes/sol.jpg"> 
+      <img class="img mr-3" src="imagenes/luna.jpg"> 
+      <img class="img mr-3" src="imagenes/galaxia.jpg"> 
     </div>
     <button class="btn bg-info ml-4 col-1" id="restore" type="reset" >Restore</button>
   </div>
@@ -38,32 +38,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js" integrity="sha512-iceXjjbmB2rwoX93Ka6HAHP+B76IY1z0o3h+N1PeDtRSsyeetU3/0QKJqGyPJcX63zysNehggFwMC/bi7dvMig==" crossorigin="anonymous"></script>
   <script>
     $(document).ready(function () {
-      $('#galaxia').on('click', function () {
-        $('#galaxia').slideUp();
+      $('img').click(function () {
+        $(this).slideUp();
+        decir('Chao');
       });
-      $('#galaxia2').on('click', function () {
-        $('#galaxia2').slideUp();
-      });
-      $('#luna').on('click', function () {
-        $('#luna').slideUp();
-      });
-      $('#luna2').on('click', function () {
-        $('#luna2').slideUp();
-      });
-      $('#sol').on('click', function () {
-        $('#sol').slideUp();
-      });
-      $('#sol2').on('click', function () {
-        $('#sol2').slideUp();
-      });
-      $('#estrellas').on('click', function () {
-        $('#estrellas').slideUp();
-      });
-      $('#estrellas2').on('click', function () {
-        $('#estrellas2').slideUp();
-      });
+
       $('#restore').on('click', function () {
         $('img').show();
+        decir('Holi otra vez');
       });
 
     });
